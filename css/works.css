@@ -137,41 +137,50 @@
 }
 
 /* === RESPONSIVE (MOBILE) === */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .works-section {
-    padding: 4rem 1rem 6rem 1rem;
+    padding: 4rem 1rem 6rem;
   }
 
-  .works-title {
-    font-size: 1.8rem;
+  .dock-carousel {
+    display: none; /* hide carousel */
+  }
+
+  .project-info-center {
+    margin-bottom: 3rem;
+  }
+
+  /* Create vertical project layout */
+  .mobile-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .mobile-project {
+    background: rgba(6,0,16,0.85);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255, 0, 255, 0.2);
+  }
+
+  .mobile-project img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
   }
 
   .proj-title {
-    font-size: 1.4rem;
-  }
-
-  .proj-role {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 
   .proj-desc {
-    font-size: 0.85rem;
-  }
-
-  .dock-track {
-    gap: 1rem;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 1.5rem 0.5rem;
-  }
-
-  .dock-slide {
-    width: 110px;
-    height: 110px;
-    flex: 0 0 auto;
-  }
-
-  .dock-slide:hover {
-    transform: scale(1.2);
+    font-size: 0.95rem;
+    color: #bbb;
   }
 }

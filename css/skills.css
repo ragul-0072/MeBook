@@ -1,5 +1,6 @@
 /* === BASE STYLES (LARGE SCREENS) === */
 body, html {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -24,7 +25,6 @@ body, html {
   max-width: 1000px;
   margin: 0 auto 5rem auto;
 }
-
 .skill-card {
   background: rgba(6, 0, 16, 0.85);
   border-radius: 1rem;
@@ -88,30 +88,24 @@ body, html {
 }
 
 /* === RESPONSIVE (MOBILE) === */
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
+@media (max-width: 768px) {
   .skills-grid {
-    gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 4rem;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   .skill-card {
-    padding: 1rem 0.5rem;
-  }
-
-  .skill-card i {
-    font-size: 1.6rem;
-  }
-
-  .skill-card p {
-    font-size: 0.85rem;
+    padding: 1.5rem 0.8rem;
+    transform: none !important;
   }
 
   .skill-card:hover {
-    transform: translateY(-15px) scale(1.15) !important;
+    transform: scale(1.1) translateY(-10px) !important;
+  }
+
+  body {
+    overflow-y: auto;
+    height: auto;
   }
 }

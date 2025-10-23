@@ -136,14 +136,16 @@
 }
 
 /* === MOBILE VIEW === */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero {
     padding: 2rem 1rem;
     height: auto;
   }
 
   .hero-content {
-    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
 
   .name {
@@ -158,13 +160,14 @@
     font-size: 0.9rem;
   }
 
+  .hero-photo img {
+    width: 150px;
+    height: 150px;
+  }
   .contact-btn {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
   }
 
-  .hero-photo img {
-    width: 150px;
-    height: 150px;
-  }
+ 
 }

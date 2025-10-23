@@ -98,26 +98,24 @@
 }
 
 /* === MOBILE VIEW === */
-@media (max-width: 480px) {
-  .me-section {
-    padding: 3rem 1.2rem;
+@media (max-width: 768px) {
+  .me-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
 
   .me-photo img {
-    width: 180px;
+    width: 220px;
     margin-bottom: 1.5rem;
   }
 
+  .me-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
   .me-title {
-    font-size: 1.8rem;
-  }
-
-  .me-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .me-story, .me-edu, .me-fun {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 2rem;
   }
 }

@@ -117,27 +117,30 @@ section {
 }
 
 /* === MOBILE VIEW === */
-@media (max-width: 480px) {
-  .section {
+@media (max-width: 768px) {
+  section {
     padding: 4rem 1rem 6rem;
   }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
-
   .contact-info {
-    gap: 1rem;
+    width: 100%;
     padding: 1.5rem;
+    gap: 1rem;
   }
 
   .info-item {
+    font-size: 1rem;
     flex-direction: column;
     text-align: center;
-    font-size: 0.9rem;
   }
 
   .info-item i {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .contact-info:hover {
+    transform: none;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
   }
 }
