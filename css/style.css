@@ -1,3 +1,4 @@
+/* === BASE STYLES (LARGE SCREENS) === */
 body {
   margin: 0;
   height: 100vh;
@@ -30,7 +31,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 
 .dock-item {
   position: relative;
@@ -79,4 +79,54 @@ body {
 .dock-item:hover .dock-label {
   opacity: 1;
   transform: translateX(-50%) translateY(-12px);
+}
+
+/* === MOBILE RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  .dock-outer {
+    bottom: 1rem;
+    width: 100%;
+  }
+
+  .dock-panel {
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 5px 15px rgba(75, 1, 124, 0.5);
+  }
+
+  .dock-item {
+    width: 42px;
+    height: 42px;
+  }
+
+  .dock-icon {
+    font-size: 1.25rem;
+  }
+
+  .dock-label {
+    font-size: 0.65rem;
+    top: -1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dock-panel {
+    gap: 0.3rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .dock-item {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dock-icon {
+    font-size: 1.1rem;
+  }
+
+  .dock-label {
+    font-size: 0.6rem;
+    top: -1.3rem;
+  }
 }

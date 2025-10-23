@@ -1,3 +1,4 @@
+/* === BASE STYLES (LARGE SCREENS) === */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,7 +7,6 @@ body, html {
   background: linear-gradient(160deg, #111 0%, #1a0d3c 100%);
   color: #fff;
 }
-
 
 .section-title {
   font-size: 3rem;
@@ -17,7 +17,6 @@ body, html {
   -webkit-text-fill-color: transparent;
 }
 
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
@@ -27,7 +26,7 @@ body, html {
 }
 
 .skill-card {
-  background: rgba(6,0,16,0.85);
+  background: rgba(6, 0, 16, 0.85);
   border-radius: 1rem;
   padding: 2rem 1rem;
   text-align: center;
@@ -55,7 +54,6 @@ body, html {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-
 .dock-outer {
   position: fixed;
   bottom: 20px;
@@ -63,4 +61,57 @@ body, html {
   transform: translateX(-50%);
   z-index: 999;
   margin: 0;
+}
+
+/* === RESPONSIVE (TABLETS) === */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .skills-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .skill-card {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .skill-card i {
+    font-size: 2rem;
+  }
+
+  .skill-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* === RESPONSIVE (MOBILE) === */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 4rem;
+  }
+
+  .skill-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .skill-card i {
+    font-size: 1.6rem;
+  }
+
+  .skill-card p {
+    font-size: 0.85rem;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-15px) scale(1.15) !important;
+  }
 }
