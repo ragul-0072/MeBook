@@ -1,4 +1,16 @@
 /* === BASE STYLES (LARGE SCREENS) === */
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+section, .hero, .works-section, .me-section {
+  min-height: auto;
+  height: auto;
+}
+
 body {
   margin: 0;
   height: 100vh;
