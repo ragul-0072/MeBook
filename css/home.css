@@ -1,0 +1,122 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #111 0%, #1a0d3c 100%);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 90%;
+  gap: 2rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-text {
+  flex: 1;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.name {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin: 0.5rem 0 1.5rem;
+  font-style: italic;
+}
+
+.intro {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #cfcfcf;
+  margin-bottom: 2rem;
+  animation: fadeUp 1.4s ease;
+}
+
+.contact-btn {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #6a00ff, #ff00d4);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+.hero-photo {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(251, 0, 255, 0.3);
+  object-fit: cover;
+  animation: float 4s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+.hero-photo img:hover {
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+}
