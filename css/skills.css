@@ -1,6 +1,4 @@
-/* === BASE STYLES (LARGE SCREENS) === */
 body, html {
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -8,6 +6,7 @@ body, html {
   background: linear-gradient(160deg, #111 0%, #1a0d3c 100%);
   color: #fff;
 }
+
 
 .section-title {
   font-size: 3rem;
@@ -18,18 +17,17 @@ body, html {
   -webkit-text-fill-color: transparent;
 }
 
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem auto 6rem;
-  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 5rem auto;
 }
 
-
-
 .skill-card {
-  background: rgba(6, 0, 16, 0.85);
+  background: rgba(6,0,16,0.85);
   border-radius: 1rem;
   padding: 2rem 1rem;
   text-align: center;
@@ -57,6 +55,7 @@ body, html {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+
 .dock-outer {
   position: fixed;
   bottom: 20px;
@@ -64,39 +63,4 @@ body, html {
   transform: translateX(-50%);
   z-index: 999;
   margin: 0;
-}
-
-/* === RESPONSIVE (TABLETS) === */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .skills-grid {
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  }
-
-  .skill-card {
-    padding: 1.5rem 0.8rem;
-  }
-
-  .skill-card i {
-    font-size: 2rem;
-  }
-
-  .skill-card p {
-    font-size: 0.95rem;
-  }
-}
-
-/* === RESPONSIVE (MOBILE) === */
-@media (max-width: 768px) {
-  body {
-    overflow-y: auto;
-    height: auto;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }

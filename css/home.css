@@ -82,13 +82,7 @@
   animation: float 4s ease-in-out infinite;
 }
 
-.hero-photo img:hover {
-  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
-  transform: scale(1.05);
-  transition: all 0.4s ease;
-}
 
-/* === ANIMATIONS === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -109,24 +103,11 @@
   50% { transform: translateY(-15px); }
 }
 
-/* === TABLET VIEW === */
+
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
-  }
-
-  .name {
-    font-size: 2.4rem;
-  }
-
-  .tagline {
-    font-size: 1.2rem;
-  }
-
-  .intro {
-    font-size: 0.95rem;
   }
 
   .hero-photo img {
@@ -134,42 +115,8 @@
     height: 180px;
   }
 }
-
-/* === MOBILE VIEW === */
-@media (max-width: 768px) {
-  .hero {
-  min-height: 100vh;
-  height: auto;
-  padding-bottom: 5rem;
-}
-
-
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .name {
-    font-size: 1.8rem;
-  }
-
-  .tagline {
-    font-size: 1rem;
-  }
-
-  .intro {
-    font-size: 0.9rem;
-  }
-
-  .hero-photo img {
-    width: 150px;
-    height: 150px;
-  }
-  .contact-btn {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
- 
+.hero-photo img:hover {
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
+  transform: scale(1.05);
+  transition: all 0.4s ease;
 }
