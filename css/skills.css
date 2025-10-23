@@ -20,11 +20,14 @@ body, html {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto 5rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto 6rem;
+  padding: 0 1rem;
 }
+
+
+
 .skill-card {
   background: rgba(6, 0, 16, 0.85);
   border-radius: 1rem;
@@ -89,23 +92,11 @@ body, html {
 
 /* === RESPONSIVE (MOBILE) === */
 @media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-
-  .skill-card {
-    padding: 1.5rem 0.8rem;
-    transform: none !important;
-  }
-
-  .skill-card:hover {
-    transform: scale(1.1) translateY(-10px) !important;
-  }
-
   body {
     overflow-y: auto;
     height: auto;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

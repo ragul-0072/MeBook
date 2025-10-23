@@ -138,9 +138,11 @@
 /* === MOBILE VIEW === */
 @media (max-width: 768px) {
   .hero {
-    padding: 2rem 1rem;
-    height: auto;
-  }
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
 
   .hero-content {
     flex-direction: column;

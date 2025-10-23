@@ -133,7 +133,7 @@ section {
 
   .info-item {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .contact-info:hover {

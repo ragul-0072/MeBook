@@ -99,23 +99,18 @@
 
 /* === MOBILE VIEW === */
 @media (max-width: 768px) {
+  .me-section {
+    height: auto;
+    padding: 5rem 1rem 6rem;
+    display: block;
+  }
   .me-container {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
   }
-
   .me-photo img {
-    width: 220px;
-    margin-bottom: 1.5rem;
-  }
-
-  .me-content {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-
-  .me-title {
-    font-size: 2rem;
+    width: 200px;
+    margin-bottom: 1rem;
   }
 }

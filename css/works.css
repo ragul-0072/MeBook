@@ -138,49 +138,36 @@
 
 /* === RESPONSIVE (MOBILE) === */
 @media (max-width: 768px) {
-  .works-section {
-    padding: 4rem 1rem 6rem;
-  }
-
   .dock-carousel {
-    display: none; /* hide carousel */
+    display: none !important;
   }
 
-  .project-info-center {
-    margin-bottom: 3rem;
+  .works-section {
+    height: auto;
+    padding: 5rem 1rem 7rem;
   }
 
-  /* Create vertical project layout */
   .mobile-projects {
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
     align-items: center;
-    gap: 3rem;
   }
 
   .mobile-project {
     background: rgba(6,0,16,0.85);
     border-radius: 1rem;
     padding: 1.5rem;
-    max-width: 90%;
+    width: 90%;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(255, 0, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255,0,255,0.2);
   }
 
   .mobile-project img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-  }
-
-  .proj-title {
-    font-size: 1.5rem;
-  }
-
-  .proj-desc {
-    font-size: 0.95rem;
-    color: #bbb;
   }
 }
