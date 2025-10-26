@@ -1,5 +1,3 @@
-/* === SECTION & TITLE (Mostly the same) === */
-/* In works.css */
 .works-section {
   min-height: 100vh;
   background: linear-gradient(160deg, #111 0%, #1a0d3c 100%);
@@ -10,27 +8,20 @@
   justify-content: center;
   padding: 6rem 2rem;
   box-sizing: border-box;
-
-  /* ADD THIS LINE: 
-    Make sure there's enough space at the bottom 
-    so the fixed dock doesn't cover your last project.
-  */
-  padding-bottom: 12rem; /* Adjust this value as needed */
+  padding-bottom: 12rem; 
 }
 
 .works-title {
   font-size: 2.8rem;
-  margin-bottom: 3rem; /* Added space above the grid */
+  margin-bottom: 3rem;
   background: linear-gradient(90deg, #a855f7, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
-/* === NEW BENTO GRID === */
 .bento-grid {
   display: grid;
-  /* A 6-column grid for flexible layouts */
   grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
   width: 100%;
@@ -45,7 +36,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none; /* Removes underline from <a> tag */
+  text-decoration: none;
   color: #fff;
 }
 
@@ -54,15 +45,13 @@
   box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
 }
 
-/* --- Grid Layout --- */
-/* Two large items on top */
 .project-1 {
   grid-column: span 3;
 }
 .project-2 {
   grid-column: span 3;
 }
-/* Three small items below */
+
 .project-3 {
   grid-column: span 2;
 }
@@ -73,10 +62,10 @@
   grid-column: span 2;
 }
 
-/* --- Card Content --- */
+
 .proj-img {
   width: 100%;
-  height: 250px; /* Give all images a consistent height */
+  height: 250px; 
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -87,7 +76,7 @@
 
 .bento-content {
   padding: 1.25rem;
-  background: #11091f; /* Darker purple background for text */
+  background: #11091f; 
 }
 
 .proj-title {
@@ -111,10 +100,9 @@
   margin: 0;
 }
 
-/* === MOBILE OPTIMIZATION === */
 @media (max-width: 768px) {
   .works-section {
-    padding: 4rem 1rem; /* Less padding on mobile */
+    padding: 4rem 1rem; 
   }
 
   .works-title {
@@ -123,12 +111,10 @@
   }
 
   .bento-grid {
-    /* Stack all items in a single column */
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  /* Make all items span the full width */
   .project-1,
   .project-2,
   .project-3,
@@ -138,15 +124,10 @@
   }
 
   .proj-img {
-    height: 200px; /* Smaller image height on mobile */
+    height: 200px;
   }
 
   .proj-title {
     font-size: 1.25rem;
   }
 }
-
-/* DELETE ALL THE OLD CSS FOR:
-  .project-info, .dock-carousel, .dock-track-wrapper, 
-  .dock-track, and .dock-slide 
-*/
