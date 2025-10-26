@@ -9,54 +9,41 @@
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
-  
+
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="name">Ragul Ganesh V</h1>
-        <h2 class="tagline">Code the Future, Debug the Present.</h2>
-        <p class="intro">
-          I’m Ragul, a tech enthusiast and problem solver passionate about bridging innovation with practicality. 
-          I thrive at the intersection of coding, design, and real-world impact, constantly exploring new technologies—from web development to quantum computing. 
-          I believe in building minimalistic yet powerful solutions that not only work but inspire.
-          <br><br>
-          When I’m not debugging or building apps, I’m experimenting with ideas that push the limits of what tech can do. 
-          My goal: to craft experiences that are smart, sleek, and meaningful.
-        </p>
-        <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Me</button>
-      </div>
+    <!-- LEFT SIDE: PROFILE CARD -->
+    <div class="profile-card">
+      <img src="assets/images/profile.png" alt="Ragul Ganesh" class="profile-img">
+      <h1 class="name">Ragul Ganesh V</h1>
+      <h2 class="tagline">Code the Future, Debug the Present.</h2>
+      <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Me</button>
 
-      <div class="hero-photo">
-        <img src="assets/images/profile.jpg" alt="Ragul Ganesh" />
+      <!-- Dock sits under profile card (home only) -->
+      <div class="dock-panel home-dock">
+        <div class="dock-item" onclick="window.location.href='index.html'">
+          <div class="dock-icon">🏠︎</div>
+          <div class="dock-label">Home</div>
+        </div>
+        <div class="dock-item" onclick="window.location.href='about.html'">
+          <div class="dock-icon">❤︎</div>
+          <div class="dock-label">Me</div>
+        </div>
+        <div class="dock-item" onclick="window.location.href='works.html'">
+          <div class="dock-icon">🖳</div>
+          <div class="dock-label">Works</div>
+        </div>
+        <div class="dock-item" onclick="window.location.href='skills.html'">
+          <div class="dock-icon">☕︎</div>
+          <div class="dock-label">Skills</div>
+        </div>
+        <div class="dock-item" onclick="window.location.href='contact.html'">
+          <div class="dock-icon">☎︎</div>
+          <div class="dock-label">Contact</div>
+        </div>
       </div>
     </div>
+
   </section>
-
-  
-  <div class="dock-outer">
-    <div class="dock-panel" id="dock-panel">
-      <div class="dock-item" onclick="window.location.href='index.html'">
-        <div class="dock-icon">🏠︎</div>
-        <div class="dock-label">Home</div>
-      </div>
-      <div class="dock-item" onclick="window.location.href='about.html'">
-        <div class="dock-icon">❤︎</div>
-        <div class="dock-label">Me</div>
-      </div>
-      <div class="dock-item" onclick="window.location.href='works.html'">
-        <div class="dock-icon">🖳</div>
-        <div class="dock-label">Works</div>
-      </div>
-      <div class="dock-item" onclick="window.location.href='skills.html'">
-        <div class="dock-icon">☕︎</div>
-        <div class="dock-label">Skills</div>
-      </div>
-      <div class="dock-item" onclick="window.location.href='contact.html'">
-        <div class="dock-icon">☎︎</div>
-        <div class="dock-label">Contact</div>
-      </div>
-    </div>
-  </div>
 
   <script src="js/script.js"></script>
   <script src="js/home.js"></script>

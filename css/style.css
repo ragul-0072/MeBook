@@ -1,51 +1,54 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh; /* <-- This allows the page to grow and scroll */
   background: linear-gradient(160deg, #111 0%, #1a0d3c 100%);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Add this to your main style.css */
 .dock-outer {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  z-index: 100;
 }
+
+/* In css/style.css */
 
 .dock-panel {
   display: flex;
-  gap: 1rem;
-  background-color: rgba(6, 0, 16, 0.85);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #222;
-  box-shadow: 0 8px 20px rgba(75, 1, 124, 0.6);
   justify-content: center;
   align-items: center;
+  gap: 0.8rem;
+  background-color: rgba(6, 0, 16, 0.85);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  box-shadow: 0 6px 15px rgba(255, 0, 255, 0.25);
+  width: fit-content;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
 }
+
+
 
 
 .dock-item {
-  position: relative;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
+  background-color: rgba(116, 104, 136, 0.8);
   border-radius: 50%;
-  background-color: #746888;
-  border: 1px solid #444;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: width 0.2s, height 0.2s, box-shadow 0.2s, transform 0.2s;
-  will-change: width, height, box-shadow, transform;
+  transition: all 0.25s ease;
 }
+
+.dock-icon {
+  font-size: 1.8rem;
+}
+
 
 .dock-item:hover {
   transform: translateY(-5px);
@@ -55,9 +58,6 @@ body {
     0 20px 40px rgba(251, 0, 255, 0.2);
 }
 
-.dock-icon {
-  font-size: 1.5rem;
-}
 
 .dock-label {
   position: absolute;
@@ -79,4 +79,8 @@ body {
 .dock-item:hover .dock-label {
   opacity: 1;
   transform: translateX(-50%) translateY(-12px);
+}
+
+.dock-item:hover {
+  transform: translateY(-8px) scale(1.1);
 }

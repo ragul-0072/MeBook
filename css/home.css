@@ -1,51 +1,99 @@
+/* ------------------------------------- */
+/* HERO SECTION — FULLSCREEN CENTERED    */
+/* ------------------------------------- */
+
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(160deg, #111 0%, #1a0d3c 100%);
+  padding: 3rem 2rem;
   color: #fff;
-  overflow: hidden;
+  text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
-.hero-content {
+/* ------------------------------------- */
+/* PROFILE CARD                          */
+/* ------------------------------------- */
+
+.profile-card {
+  background: rgba(30, 0, 50, 0.4);
+  border: 1px solid rgba(255, 0, 255, 0.2);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  width: 320px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  width: 90%;
-  gap: 2rem;
-  animation: fadeIn 1.2s ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 
-.hero-text {
-  flex: 1;
-  animation: slideInLeft 1s ease forwards;
+/* Hover lift */
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
 }
 
+/* Profile photo */
+.profile-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(251, 0, 255, 0.3);
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.profile-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
+  transition: all 0.4s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Name and tagline */
 .name {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
   background: linear-gradient(90deg, #a855f7, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .tagline {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #ddd;
-  margin: 0.5rem 0 1.5rem;
+  margin-bottom: 1rem;
   font-style: italic;
 }
 
 .intro {
-  line-height: 1.7;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #cfcfcf;
+  line-height: 1.6;
   margin-bottom: 2rem;
-  animation: fadeUp 1.4s ease;
 }
+
+/* ------------------------------------- */
+/* CONTACT BUTTON                        */
+/* ------------------------------------- */
 
 .contact-btn {
   padding: 0.8rem 1.8rem;
@@ -65,58 +113,111 @@
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
 }
 
-.hero-photo {
-  flex: 0.8;
+/* ------------------------------------- */
+/* DOCK UNDER PROFILE CARD               */
+/* ------------------------------------- */
+
+.home-dock {
+  margin-top: 2.5rem; /* Space below profile card */
+  background-color: rgba(30, 0, 50, 0.6);
+  border-radius: 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(255, 0, 255, 0.2);
+  box-shadow: 0 6px 15px rgba(255, 0, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.8rem;
+  width: max-content;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease-out 0.4s forwards;
 }
 
-.hero-photo img {
-  width: 250px;
-  height: 250px;
+/* Dock item styles */
+.home-dock .dock-item {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(120, 100, 160, 0.8);
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 30px rgba(251, 0, 255, 0.3);
-  object-fit: cover;
-  animation: float 4s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  animation: glowPulse 3s ease-in-out infinite;
 }
 
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Hover pop */
+.home-dock .dock-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4);
 }
 
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
+/* Glow breathing animation */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(255, 0, 255, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 0, 255, 0.6); }
 }
 
+/* Dock fade-in + slide-up */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-
+/* ------------------------------------- */
+/* RESPONSIVE FIXES                      */
+/* ------------------------------------- */
 
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
+  .hero {
+    padding: 2rem 1rem;
   }
 
-  .hero-photo img {
-    width: 180px;
-    height: 180px;
+  .profile-card {
+    width: 90%;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+  }
+
+  .home-dock {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .home-dock .dock-item {
+    width: 40px;
+    height: 40px;
   }
 }
-.hero-photo img:hover {
-  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
-  transform: scale(1.05);
-  transition: all 0.4s ease;
+
+@media (max-width: 480px) {
+  .profile-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .contact-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
